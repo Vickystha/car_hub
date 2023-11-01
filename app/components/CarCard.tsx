@@ -1,5 +1,6 @@
 "use-client"
 import { CarProps } from "@/types"
+import { calculateCarRent } from "@/utils"
 import Image from "next/image"
 import { useState } from "react"
 
@@ -10,6 +11,9 @@ interface CarCardProps {
 const CarCard = ({ car }: CarCardProps) => {
     //Destructure car property
     const { city_mpg, year, make, model, transmission, drive } = car;
+
+    //Call calculateCarRent function
+    const carRent = calculateCarRent(city_mpg, year);
     return (
         <div className="car-card group">
             <div className="car-card__content">
@@ -19,7 +23,7 @@ const CarCard = ({ car }: CarCardProps) => {
             </div>
 
             <p className='flex mt-6 text-[32px] leading-[38px] font-extrabold'>
-                <span>Car Rent...</span>
+                <span>{carRent}</span>
             </p>
 
             <div className='relative w-full h-40 my-3 object-contain'>
