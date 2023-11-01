@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import SearchBar from './components/SearchBar'
 import CustomFilter from './components/CustomFilter'
 import { fetchCars } from '@/utils'
+import CarCard from './components/CarCard'
 
 export default async function Home() {
   const allCars = await fetchCars();
@@ -27,10 +28,14 @@ export default async function Home() {
         </div>
        
         {!isDataEmpty ? (
-           //If not empty data show cars card
+           
           <section>
             <div className='home__cars-wrapper'>
-              WE HAVE CARS
+            {/* If not empty data show cars card that return car property (car property by passing car data to it) */}
+            {allCars?.map((car) => (
+                <CarCard car={car} />
+              ))}
+             
             </div>
               
           </section>
