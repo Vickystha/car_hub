@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import SearchManufacturer from './SearchManufacturer'
 import Image from 'next/image'
+import { useRouter } from "next/navigation";
 
 
 //SearchButton that immediately returns a button
@@ -23,13 +24,47 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
 
 
 const SearchBar = () => {
-    const handleSearch = () => {
-
-
-    }
     const [manufacturer, setManufacturer] = useState("");
     const [model, setModel] = useState("");
-    
+    const router = useRouter();
+
+    const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        // Show alert message if manufacturer and model the data not entered
+        if (manufacturer.trim() === "" && model.trim() === "") {
+            return alert("Please provide some input");
+        }
+        // Call updateSearchParams function that takes model and manufacturer data to update in url
+        updateSearchParams(model.toLowerCase(), manufacturer.toLowerCase());
+
+    }
+
+    // Function that takes model and manufacturer data to update in url
+    const updateSearchParams = (model: string, manufacturer: string) => {
+        // Create a new URLSearchParams object using the current URL search parameters
+        const searchParams = new URLSearchParams(window.location.search);
+
+        // Update or delete the 'model' search parameter based on the 'model' value
+        if (model) {
+            searchParams.set("model", model);
+        } else {
+            searchParams.delete("model");
+        }
+
+        // Update or delete the 'manufacturer' search parameter based on the 'manufacturer' value
+        if (manufacturer) {
+            searchParams.set("manufacturer", manufacturer);
+        } else {
+            searchParams.delete("manufacturer");
+        }
+
+        // Generate the new pathname with the updated search parameters
+        const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
+
+        router.push(newPathname);
+    };
+
+
 
     return (
         <form className='searchbar' onSubmit={handleSearch}>

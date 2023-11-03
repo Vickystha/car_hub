@@ -4,9 +4,16 @@ import SearchBar from './components/SearchBar'
 import CustomFilter from './components/CustomFilter'
 import { fetchCars } from '@/utils'
 import CarCard from './components/CarCard'
+import { HomeProps } from '@/types'
 
-export default async function Home() {
-  const allCars = await fetchCars();
+export default async function Home({searchParams}:HomeProps) {
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || "",
+  });
 
   //Check if all of the cars data is empty
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
