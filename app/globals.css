@@ -17,7 +17,7 @@
 }
 
 .padding-x {
-    @apply sm: px-16 px-6;
+    @apply sm:px-16 px-6;
 }
 
 .padding-y {
@@ -40,11 +40,11 @@
 
 /* START: Hero styles */
 .hero {
-    @apply flex xl: flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+    @apply flex xl:flex-row flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
 }
 
 .hero__title {
-    @apply 2xl: text-[72px] sm:text-[64px] text-[50px] font-extrabold;
+    @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
 }
 
 .hero__subtitle {
@@ -52,15 +52,15 @@
 }
 
 .hero__image-container {
-    @apply xl: flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+    @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
 }
 
 .hero__image {
-    @apply relative xl: w-full w-[90%] xl:h-full h-[590px] z-0;
+    @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
 }
 
 .hero__image-overlay {
-    @apply absolute xl: -top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+    @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
 }
 
 /* END: Hero styles */
@@ -80,7 +80,7 @@
 }
 
 .home__cars-wrapper {
-    @apply grid 2xl: grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+    @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
 }
 
 .home__error-container {
@@ -91,15 +91,15 @@
 
 /* START: search manufacturer styles */
 .search-manufacturer {
-    @apply flex-1 max-sm: w-full flex justify-start items-center;
+    @apply flex-1 max-sm:w-full flex justify-start items-center;
 }
 
 .search-manufacturer__input {
-    @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm: rounded-full bg-light-white outline-none cursor-pointer text-sm;
+    @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm;
 }
 
 .search-manufacturer__options {
-    @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus: outline-none sm:text-sm;
+    @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
 }
 
 .search-manufacturer__option {
@@ -110,7 +110,7 @@
 
 /* START: Car Card styles */
 .car-card {
-    @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover: bg-white hover:shadow-md rounded-3xl;
+    @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
 }
 
 .car-card__content {
@@ -138,7 +138,7 @@
 }
 
 .car-card__icon-container {
-    @apply flex group-hover: invisible w-full justify-between text-grey;
+    @apply flex group-hover:invisible w-full justify-between text-grey;
 }
 
 .car-card__icon {
@@ -150,7 +150,7 @@
 }
 
 .car-card__btn-container {
-    @apply hidden group-hover: flex absolute bottom-0 w-full z-10;
+    @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
 }
 
 /* END: Car Card styles */
@@ -158,26 +158,26 @@
 
 /* START: searchbar styles */
 .searchbar {
-    @apply flex items-center justify-start max-sm: flex-col w-full relative max-sm:gap-4 max-w-3xl;
+    @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
 }
 
 .searchbar__item {
-    @apply flex-1 max-sm: w-full flex justify-start items-center relative;
+    @apply flex-1 max-sm:w-full flex justify-start items-center relative;
 }
 
 .searchbar__input {
-    @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm: rounded-full outline-none cursor-pointer text-sm;
+    @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
 }
 
 /* END: searchbar styles */
 
 /* START: Custom Filter styles */
 .custom-filter__btn {
-    @apply relative w-full min-w-[127px] flex justify-between items-center cursor-default rounded-lg bg-white py-2 px-3 text-left shadow-md sm: text-sm border;
+    @apply relative w-full min-w-[127px] flex justify-between items-center cursor-default rounded-lg bg-white py-2 px-3 text-left shadow-md sm:text-sm border;
 }
 
 .custom-filter__options {
-    @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus: outline-none sm:text-sm;
+    @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
 }
 
 /* END: Custom Filter styles */
@@ -189,7 +189,7 @@
 }
 
 .footer__links-container {
-    @apply flex max-md: flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10;
+    @apply flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10;
 }
 
 .footer__rights {
@@ -197,7 +197,7 @@
 }
 
 .footer__links {
-    @apply flex-1 w-full flex md: justify-end flex-wrap max-md:mt-10 gap-20;
+    @apply flex-1 w-full flex md:justify-end flex-wrap max-md:mt-10 gap-20;
 }
 
 .footer__link {
@@ -205,11 +205,11 @@
 }
 
 .footer__copyrights {
-    @apply flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm: px-16 px-6 py-10;
+    @apply flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10;
 }
 
 .footer__copyrights-link {
-    @apply flex-1 flex sm: justify-end justify-center max-sm:mt-4 gap-10;
+    @apply flex-1 flex sm:justify-end justify-center max-sm:mt-4 gap-10;
 }
 
 /* END: Footer styles */
