@@ -6,6 +6,7 @@ import { fetchCars } from '@/utils'
 import CarCard from './components/CarCard'
 import { HomeProps } from '@/types'
 import { fuels, yearsOfProduction } from '@/constants'
+import ShowMore from './components/ShowMore'
 
 export default async function Home({searchParams}:HomeProps) {
   const allCars = await fetchCars({
@@ -45,6 +46,10 @@ export default async function Home({searchParams}:HomeProps) {
               ))}
              
             </div>
+            <ShowMore
+              pageNumber = {(searchParams.limit || 10) / 10} // Showing 10 cars per page
+              isNext = {(searchParams.limit || 10) > allCars.length} // No new car to show if the condition meets
+             />
               
           </section>
         ) : (
