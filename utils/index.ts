@@ -5,6 +5,8 @@ export async function fetchCars(filters: FilterProps) {
     const { manufacturer, year, model, limit, fuel } = filters;
     const apiBase = process.env.CARS_RAPID_API_BASE || 'https://cars-by-api-ninjas.p.rapidapi.com';
 
+    console.log("[Secret] Checking secrets from .env. SECRET_LOADING_TEST:",process.env.SECRET_LOADING_TEST || 'Notloaded');
+
     // Set the required headers for the API request
     const headers = {
         'X-RapidAPI-Key': process.env.CARS_RAPID_API_KEY || '',
