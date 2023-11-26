@@ -3,7 +3,7 @@ import { CarProps, FilterProps } from "@/types";
 //Cars API call
 export async function fetchCars(filters: FilterProps) {
     const { manufacturer, year, model, limit, fuel } = filters;
-    const apiBase = process.env.CARS_RAPID_API_BASE || '';
+    const apiBase = process.env.CARS_RAPID_API_BASE || 'https://cars-by-api-ninjas.p.rapidapi.com';
 
     // Set the required headers for the API request
     const headers = {
