@@ -50,3 +50,9 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Debugging
+
+#### VSCode
+
+To use debugger tool in VSCode follow this doc - [NextJS | Debugging](https://nextjs.org/docs/pages/building-your-application/configuring/debugging)
