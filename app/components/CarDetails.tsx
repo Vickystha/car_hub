@@ -12,6 +12,8 @@ interface CarDetailsProps {
 }
 
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
+  const carsImageApiCustomer = process.env.NEXT_PUBLIC_CARS_IMAGE_API_CUSTOMER || '';
+  console.log("CarsDetail: ",carsImageApiCustomer)
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
