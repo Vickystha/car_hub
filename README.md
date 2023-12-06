@@ -31,6 +31,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### User registration and account
 This feature is currently being developed and is the next release on the roadmap.
 
+### Customer Reviews
+This feature is currently being developed and is the next release on the roadmap.
+
 
 ## For Developers - Getting Started
 
