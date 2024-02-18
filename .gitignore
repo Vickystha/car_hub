@@ -3,6 +3,9 @@
 .vscode/
 .idea/
 
+# secrets
+.npmrc
+
 # dependencies
 /node_modules
 /.pnp
