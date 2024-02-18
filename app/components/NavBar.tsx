@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { Button } from '@intunedtech/eskel-component-library';
 import CustomButton from "./CustomButton";
 
 const NavBar = () => {
@@ -17,11 +17,9 @@ const NavBar = () => {
                     />
                 </Link>
 
-                <CustomButton
-                    title='Sign in'
-                    btnType='button'
-                    containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'
-                />
+                <Button className={`text-primary-blue rounded-full bg-white min-w-[130px]`}>Sign In</Button>
+                <Button className={`text-primary-blue rounded-full bg-white min-w-[130px]`}>Register</Button>
+                
             </nav>
         </header>
     )
